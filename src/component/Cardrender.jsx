@@ -11,7 +11,7 @@ const Cardrender = ({category}) => {
   
 
   const ketan = async () => {
-    // let url = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=ace34c5541f042b8af4d3d7d14a1f775`)
+   
     let url = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`)
     let data = await url.json()
     setArticles(data.articles)
